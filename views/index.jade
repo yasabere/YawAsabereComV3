@@ -1,7 +1,7 @@
 extends layout
 
 block body
-  .navbar.navbar-default.navbar-fixed-top(role="navigation")
+  .navbar.navbar-default.navbar-fixed-top(role="navigation", style="display:none")
     .navbar-header
       button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse")
         span.sr-only Toggle navigation
@@ -25,15 +25,50 @@ block body
     div(style="width:200px;position:absolute;left: 50%;margin-left: -100px;bottom:12.5%; color:white;text-align:center;") 
       p SCROLL DOWN
       img(src="images/scrolldown.png")
-  div(style="background-color: #f1f1f1; height:100%")
+  div(style="background-color: #f1f1f1; height:100%; display:none;")
 
-  .container      
-    div(ng-controller='AppCtrl')
-      div(ng-view)
-    hr  
+  .container
+    br
+    br
+    h2.text-center MY PROJECTS
+    br
+    .row(style="padding:20px")
+      .col-md-8
+        img(src="images/ponginfinity.png", width="100%")
+        br
+        br
+        h2 PONG INFINITY
+        p Pong with a twist. Realtime pong multiplayer for up to 8 people at once, taking place on a circular court rather than a rectangular one. Submitted to VTHacks
+      .col-md-4
+    hr 
+    .row(style="padding:20px")
+      .col-md-8
+        img(src="images/ppdpapp.png", width="100%")
+        br
+        br
+        h2 TEMPLE UNIVERSITY PA POLICY PROJECT
+        p Front end application designed to provide the Temple University PA Policy Project with a content management system with a user a Gmail style driven user experience.
+      .col-md-4
+    hr
+    .row(style="padding:20px")
+      .col-md-8
+        img(src="images/postingnation.jpg", width="100%")
+        br
+        br
+        h2 POSTING NATION
+        p Postingnation is an online marketplace based on communities. Create a classified site specific to your community with custom privacy controls that let you decide who can buy, sell, and trade. Or, join an existing community and start trading with your friends or members verified by comments and reviews. The Internet can be a shady place – let Posting Nation add some certainty
+      .col-md-4
+    hr
+    .row(style="padding:20px", ng-show="false")
+      .col-md-8
+        img(src="images/ppdpapp.png", width="100%")
+        br
+        br
+        h2 RENT TEMPLE U
+        p 
+      .col-md-4
     div
-      | Angular seed app: v
-      span(app-version)
+      p Yaw Asabere 2016
 
   script(src='js/lib/angular/angular.js')
   script(src='js/lib/angular/angular-route.js')
