@@ -33,7 +33,7 @@ nav ul li {
     float: none;
 }
 
-.fs {min-height: 100vh;}
+.fs {height: 100vh;}
 .br {min-height: 60vh;}
 
 /* =Simple animation up */
@@ -93,6 +93,7 @@ h3 {
   line-height: 23px;
 }
 p {
+  font-family: 'Paytone One';
   font-size: 14px;
   font-style: normal;
   font-variant: normal;

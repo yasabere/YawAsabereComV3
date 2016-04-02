@@ -8,7 +8,7 @@ var express = require('express'),
   api = require('./routes/api'),
   http = require('http'),
   path = require('path');
-
+  livereload = require('express-livereload')
 
 var app = module.exports = express();
 
@@ -47,6 +47,10 @@ app.get('/api/name', api.name);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
+
+
+//add live reload
+livereload(app, config={});
 
 /**
 * Start Server
